@@ -1,3 +1,25 @@
+# 说明
+
+**本人非原作者，已经自行修改了Github Actions的一些逻辑，包括触发时机，以及rclone v1.65.x版本产生的onedrive无法执行ls的bug（暂时使用已经应用修复补丁的beta版）**
+
+**如果需要使用此修改版的项目，你需要注意以下两点**
+
+- **仅fork `source` 分支，这是没有产生垃圾提交的干净分支**
+- **我将触发时机为了仅在`main`分支更新时触发，并且只会定时更新此分支。所以你需要在按照下方原作者的配置教程配置完成后，基于`source`分支手动创建`main`分支并推送到你自己的仓库，命令参考如下**
+
+```bash
+# 先fork，然后克隆你的仓库
+$ git clone <url>(替换为你自己的仓库地址) && cd e5-renew
+# 确保你目前正在source分支
+$ git checkout source 
+# 基于source分支创建main分支
+$ git checkout -b main
+# 推送main分支
+$ git push origin main
+```
+
+
+
 # E5-Rclone-Actions-Repo（仓库版）
 
 孪生项目：[E5-Rclone-Actions-Gist（Gist版）](https://github.com/ChirmyRam/E5-Rclone-Actions-Gist)，配置繁琐。
